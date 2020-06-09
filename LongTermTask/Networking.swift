@@ -8,7 +8,7 @@
 
 class Networking: INetworking {
 
-    let longTask = LongTask(10.0)
+    let longTask = LongTask(Double.random(in: 7.0...12.0))
 
     func downloadAsset(_ progress: @escaping ProgressClosure,
                        _ completion: @escaping CompletionClosure) {

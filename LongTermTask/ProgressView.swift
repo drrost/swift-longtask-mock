@@ -12,6 +12,7 @@ class ProgressView: UIView {
 
     @IBOutlet weak var progressBarContainerView: UIView!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var percentageLabel: UILabel!
 
     var progress: Double = 0.0 {
         didSet {
@@ -28,6 +29,7 @@ class ProgressView: UIView {
     private func updateUi() {
         let width = progressBarContainerView.frame.size.width
         widthConstraint.constant = width * CGFloat(progress)
+        percentageLabel.text = String(format: "%d %%", Int(progress * 100))
     }
 
     override func layoutSubviews() {
