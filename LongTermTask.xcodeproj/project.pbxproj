@@ -16,6 +16,7 @@
 		11D46D9D248F8AEE00069CE5 /* LongTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D46D9B248F8AED00069CE5 /* LongTask.swift */; };
 		11D46D9E248F8AEE00069CE5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D46D9C248F8AED00069CE5 /* Networking.swift */; };
 		11D46DA0248F8CA000069CE5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D46D9F248F8CA000069CE5 /* ProgressView.swift */; };
+		11D46DA2248FC0B600069CE5 /* INetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D46DA1248FC0B600069CE5 /* INetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		11D46D9B248F8AED00069CE5 /* LongTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongTask.swift; sourceTree = "<group>"; };
 		11D46D9C248F8AED00069CE5 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		11D46D9F248F8CA000069CE5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		11D46DA1248FC0B600069CE5 /* INetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				11D46D9B248F8AED00069CE5 /* LongTask.swift */,
 				11D46D9C248F8AED00069CE5 /* Networking.swift */,
+				11D46DA1248FC0B600069CE5 /* INetworking.swift */,
 				11D46D86248F8AC600069CE5 /* AppDelegate.swift */,
 				11D46D88248F8AC600069CE5 /* SceneDelegate.swift */,
 				11D46D8A248F8AC600069CE5 /* ViewController.swift */,
@@ -149,6 +152,7 @@
 			files = (
 				11D46D9D248F8AEE00069CE5 /* LongTask.swift in Sources */,
 				11D46D9E248F8AEE00069CE5 /* Networking.swift in Sources */,
+				11D46DA2248FC0B600069CE5 /* INetworking.swift in Sources */,
 				11D46D8B248F8AC600069CE5 /* ViewController.swift in Sources */,
 				11D46D87248F8AC600069CE5 /* AppDelegate.swift in Sources */,
 				11D46D89248F8AC600069CE5 /* SceneDelegate.swift in Sources */,

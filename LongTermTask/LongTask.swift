@@ -10,9 +10,10 @@ import Foundation
 
 class LongTask {
 
-    let time: TimeInterval
-    var spent: TimeInterval = 0.0
-    var period: TimeInterval = 1.0
+    private let time: TimeInterval
+    private var period: TimeInterval = 0.01
+    private var startedAt: Date!
+    private var shouldFinishAt: Date!
 
     // MARK: - Init
 
@@ -20,16 +21,13 @@ class LongTask {
         self.time = time
     }
 
-    deinit {
-        print("LongTask killed")
-    }
-
     // MARK: - Public
 
     func begin(_ progress: @escaping ProgressClosure,
                _ completion: @escaping CompletionClosure) {
 
-        spent = 0;
+        startedAt = Date()
+        shouldFinishAt = startedAt + time
         tick(progress, completion)
     }
 
@@ -39,11 +37,14 @@ class LongTask {
         DispatchQueue.main.asyncAfter(deadline: .now() + period) { [weak self] in
 
             guard let self = self else { return }
-            self.spent += self.period
 
-            progress(self.spent / self.time)
+            let now = Date()
+            let spent = now.timeIntervalSince(self.startedAt)
+            let total = self.shouldFinishAt.timeIntervalSince(self.startedAt)
 
-            if self.spent >= self.time {
+            progress(spent / total)
+
+            if now >= self.shouldFinishAt {
                 completion(nil)
             } else {
                 self.tick(progress, completion)
