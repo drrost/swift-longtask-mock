@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LongTermTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-C5-eBa">
+                                <rect key="frame" x="128.5" y="278" width="157" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Xhs-sW-Pjf"/>
+                                    <constraint firstAttribute="width" constant="157" id="oVs-Qe-nep"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="download:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8j-c7-nfc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFd-lm-gpi" customClass="ProgressView" customModule="LongTermTask" customModuleProvider="target">
+                                <rect key="frame" x="20" y="94" width="374" height="132"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-px-w5y">
+                                        <rect key="frame" x="8" y="4" width="358" height="124"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPR-AC-Fso">
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="124"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="358" id="EWd-Tx-Ked"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="HPR-AC-Fso" secondAttribute="bottom" id="FDM-Ly-LYh"/>
+                                            <constraint firstItem="HPR-AC-Fso" firstAttribute="leading" secondItem="rkc-px-w5y" secondAttribute="leading" id="pb5-1f-lFr"/>
+                                            <constraint firstItem="HPR-AC-Fso" firstAttribute="top" secondItem="rkc-px-w5y" secondAttribute="top" id="sIY-gs-NNa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rkc-px-w5y" secondAttribute="trailing" constant="8" id="0Wk-mc-tqo"/>
+                                    <constraint firstItem="rkc-px-w5y" firstAttribute="leading" secondItem="EFd-lm-gpi" secondAttribute="leading" constant="8" id="AIp-6e-EfE"/>
+                                    <constraint firstAttribute="height" constant="132" id="Bnb-8a-VZf"/>
+                                    <constraint firstItem="rkc-px-w5y" firstAttribute="top" secondItem="EFd-lm-gpi" secondAttribute="top" constant="4" id="I2h-T0-Txb"/>
+                                    <constraint firstAttribute="bottom" secondItem="rkc-px-w5y" secondAttribute="bottom" constant="4" id="IDv-XK-BWI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="progressBarContainerView" destination="rkc-px-w5y" id="8Ud-wc-lzd"/>
+                                    <outlet property="widthConstraint" destination="EWd-Tx-Ked" id="T3E-oc-tW6"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VYT-C5-eBa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5tB-h8-jqr"/>
+                            <constraint firstItem="EFd-lm-gpi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CKv-g3-Qs5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EFd-lm-gpi" secondAttribute="trailing" constant="20" id="Cuk-Mm-7NB"/>
+                            <constraint firstItem="VYT-C5-eBa" firstAttribute="top" secondItem="EFd-lm-gpi" secondAttribute="bottom" constant="52" id="DG1-Ua-rSX"/>
+                            <constraint firstItem="EFd-lm-gpi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KZG-NH-Du7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="VYT-C5-eBa" id="anA-N1-CZ0"/>
+                        <outlet property="progressView" destination="EFd-lm-gpi" id="r9k-7V-EqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>
